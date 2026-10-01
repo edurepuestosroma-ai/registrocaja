@@ -7,6 +7,13 @@
 <span class="" id="toast-message">Operación realizada con éxito</span>
 </div>
 <!-- Main Action & Header Toolbar -->
+<script src="https://jsdelivr.net"></script>
+<script>
+  // Conexión con tus credenciales de Supabase
+  const supabaseUrl = umaxlfexsjaairpucltg;
+  const supabaseKey = sb_publishable_DAQ40-XhnTCk0m5gg34HSw_fTcrUliK;
+  const supabase = supabaseJs.createClient(supabaseUrl, supabaseKey);
+</script>
 <header class="w-full bg-surface-container-lowest p-space-md shadow-sm rounded-xl mb-space-md flex flex-col gap-space-md">
 <!-- Top Row: Title, Mode Badges, and Core Controls -->
 <div class="flex flex-wrap items-center justify-between gap-space-md">
@@ -628,9 +635,21 @@
         obs
       });
     });
+    });
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
-    triggerAutosaveIndicator();
+    // Enviar los registros en tiempo real a tu tabla de Supabase
+    supabase
+      .from('registros')
+      .upsert(records, { onConflict: 'id' })
+      .then(({ error }) => {
+        if (!error) {
+          triggerAutosaveIndicator();
+        } else {
+          console.error("Error al sincronizar con la nube:", error);
+        }
+      });
+  }
+
   }
 
   // Render a specific row HTML given data
