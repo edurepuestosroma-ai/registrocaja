@@ -1,0 +1,1354 @@
+<!DOCTYPE html><html lang="es" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#00201d","secondary":"#006a63","surface-container":"#e5eeff","on-tertiary-fixed":"#2f1500","on-secondary-container":"#006f67","primary-fixed-dim":"#c3c0ff","on-surface":"#0b1c30","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#00504a","background":"#f8f9ff","surface-variant":"#d3e4fe","inverse-surface":"#213145","outline-variant":"#c7c4d7","on-tertiary":"#ffffff","tertiary-fixed-dim":"#ffb77d","primary-container":"#4338ca","secondary-fixed-dim":"#80d5cb","surface-container-lowest":"#ffffff","primary":"#2a14b4","on-error":"#ffffff","tertiary-container":"#7d4200","on-tertiary-fixed-variant":"#6e3900","on-primary":"#ffffff","secondary-container":"#99efe5","on-tertiary-container":"#ffb477","on-surface-variant":"#464554","inverse-on-surface":"#eaf1ff","on-error-container":"#93000a","on-secondary":"#ffffff","outline":"#777586","inverse-primary":"#c3c0ff","tertiary-fixed":"#ffdcc3","primary-fixed":"#e3dfff","surface-container-low":"#eff4ff","error":"#ba1a1a","surface-tint":"#5148d7","tertiary":"#5c2f00","error-container":"#ffdad6","on-primary-fixed-variant":"#372abf","surface-bright":"#f8f9ff","on-background":"#0b1c30","secondary-fixed":"#9cf2e8","on-primary-container":"#c1beff","surface-container-highest":"#d3e4fe","on-primary-fixed":"#100069","surface-dim":"#cbdbf5","surface":"#f8f9ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","space-md":"0.5rem","gutter":"0.75rem","space-xl":"1rem","space-sm":"0.25rem","space-xs":"0.125rem","space-lg":"0.75rem"},fontFamily:{"body-md":["Geist"],"headline-md":["Geist"],"body-sm":["Geist"],"headline-lg":["Geist"],"mono-data-sm":["JetBrains Mono"],"mono-data-md":["JetBrains Mono"],"headline-sm":["Geist"],"body-lg":["Geist"],"mono-data-lg":["JetBrains Mono"],"label-caps":["Geist"]},fontSize:{"body-md":["0.8125rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"mono-data-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0","fontWeight":"400"}],"mono-data-md":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"mono-data-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"-0.02em","fontWeight":"500"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><div class=""><header class="fixed top-0 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between inset-x-0"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-secondary-container px-space-md py-space-xs rounded"></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Efectivo</span><span class="font-mono-data-sm text-mono-data-sm text-on-surface font-semibold" id="top-bar-efectivo">$4,250.00</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Tarjeta</span><span class="font-mono-data-sm text-mono-data-sm text-on-surface font-semibold" id="top-bar-tarjeta">$8,120.50</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Registros</span><span class="font-mono-data-sm text-mono-data-sm text-on-surface" id="top-bar-registros">142</span></div></div></div><div class="flex items-center gap-space-lg"><!-- Sutil indicador de Auto-guardado en LocalStorage --><div class="hidden sm:flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant text-[11px] font-mono-data-sm" id="autosave-status"><span class="material-symbols-outlined text-secondary text-[15px]" id="autosave-icon">cloud_done</span><span class="" id="autosave-text">Auto-guardado activo</span></div><div class="flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded text-on-surface-variant"><span class="font-label-caps text-label-caps uppercase">F2 Nuevo</span><span class="text-on-surface-variant">•</span><span class="font-label-caps text-label-caps uppercase">F9 Cierre</span></div><div class="flex items-center gap-space-md"><button class="p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 px-space-lg bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Styles & Shortcuts Feedback Alert -->
+<div class="fixed bottom-12 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-200 pointer-events-none bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm font-mono-data-sm text-mono-data-sm" id="toast-notify">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check_circle</span>
+<span class="" id="toast-message">Operación realizada con éxito</span>
+</div>
+<!-- Main Action & Header Toolbar -->
+<header class="w-full bg-surface-container-lowest p-space-md shadow-sm rounded-xl mb-space-md flex flex-col gap-space-md">
+<!-- Top Row: Title, Mode Badges, and Core Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Registro diario de caja</h1>
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded text-[11px] font-mono-data-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Sesión en Curso
+          </span>
+<span class="hidden md:inline-flex bg-surface-container text-on-surface-variant px-space-sm py-0.5 rounded font-label-caps text-label-caps uppercase">
+            Turno T-01
+          </span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-md py-1.5 rounded-lg text-body-sm font-body-sm transition-all shadow-sm active:scale-95" id="btn-lock-all" title="Bloquea todas las filas completas y las oculta de la cuadrícula activa" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span class="font-medium">Bloquear Rellenas</span>
+</button>
+<button class="inline-flex items-center gap-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-lg text-body-sm font-body-sm transition-all active:scale-95" id="btn-unlock-all" title="Desbloquea y muestra nuevamente todas las filas" type="button">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span class="">Desbloquear Todas</span>
+</button>
+<div class="h-4 w-px bg-surface-container-highest mx-0.5"></div>
+<button class="inline-flex items-center gap-1.5 bg-primary-container hover:bg-primary text-on-primary px-space-md py-1.5 rounded-lg text-body-sm font-body-sm font-semibold transition-all shadow-sm active:scale-95" id="btn-add-line" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Nueva Línea <kbd class="bg-surface/20 px-1 py-0.2 rounded text-[10px] font-mono-data-sm">Enter</kbd></span>
+</button>
+<!-- Dropdowns for Import / Export -->
+<div class="relative inline-block text-left">
+<button class="inline-flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg text-body-sm font-body-sm transition-colors" id="btn-import-menu" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span class="">Importar</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-lowest shadow-xl z-30 p-1" id="import-dropdown">
+<button class="w-full text-left px-3 py-1.5 rounded hover:bg-surface-container flex items-center gap-2 text-body-sm text-on-surface" onclick="triggerImport('excel')">
+<span class="material-symbols-outlined text-secondary text-[16px]">table_view</span> Excel (.xlsx, .xls)
+            </button>
+<button class="w-full text-left px-3 py-1.5 rounded hover:bg-surface-container flex items-center gap-2 text-body-sm text-on-surface" onclick="triggerImport('csv')">
+<span class="material-symbols-outlined text-primary text-[16px]">csv</span> Archivo CSV (.csv)
+            </button>
+</div>
+</div>
+<div class="relative inline-block text-left">
+<button class="inline-flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg text-body-sm font-body-sm transition-colors" id="btn-export-menu" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Exportar</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-lowest shadow-xl z-30 p-1" id="export-dropdown">
+<button class="w-full text-left px-3 py-1.5 rounded hover:bg-surface-container flex items-center gap-2 text-body-sm text-on-surface" onclick="exportData('xlsx')">
+<span class="material-symbols-outlined text-secondary text-[16px]">file_download</span> Libro Excel (.xlsx)
+            </button>
+<button class="w-full text-left px-3 py-1.5 rounded hover:bg-surface-container flex items-center gap-2 text-body-sm text-on-surface" onclick="exportData('csv')">
+<span class="material-symbols-outlined text-primary text-[16px]">database</span> Datos CSV (.csv)
+            </button>
+<button class="w-full text-left px-3 py-1.5 rounded hover:bg-surface-container flex items-center gap-2 text-body-sm text-on-surface" onclick="window.print()">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">print</span> Imprimir / PDF
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Second Row: Real-time Filters, Hidden-Locked Toggle & Interactive KPI Strip -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md pt-2">
+<!-- Search, Page Sizer & Hide-Locked Toggle Group -->
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<div class="relative flex-1 min-w-[240px] max-w-md">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full pl-8 pr-8 py-1.5 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] transition-all" id="table-search-input" placeholder="Buscar por Albarán, Cliente, Observación, Fecha (F3)..." type="text">
+<button class="hidden absolute right-2.5 top-2 text-on-surface-variant hover:text-on-surface text-[16px] leading-none" id="search-clear-btn">✕</button>
+</div>
+<!-- Toggle Ocultar Bloqueados -->
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-body-sm font-body-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-all select-none border border-transparent" id="toggle-hide-locked" title="Alternar visibilidad de las filas bloqueadas">
+<span class="material-symbols-outlined text-[16px] text-primary" id="toggle-hide-icon">visibility_off</span>
+<span class="font-medium" id="toggle-hide-label">Ocultar bloqueados</span>
+<span class="bg-surface-container-highest text-primary font-mono-data-sm text-[11px] font-bold px-1.5 py-0.2 rounded-full" id="locked-hidden-count">3 ocultos</span>
+</button>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<span class="text-[11px] font-label-caps uppercase text-on-surface-variant px-1.5">Ver:</span>
+<button class="px-2 py-0.5 rounded text-[11px] font-mono-data-sm bg-surface-container-lowest text-primary font-bold shadow-xs">25</button>
+<button class="px-2 py-0.5 rounded text-[11px] font-mono-data-sm text-on-surface-variant hover:text-on-surface">50</button>
+<button class="px-2 py-0.5 rounded text-[11px] font-mono-data-sm text-on-surface-variant hover:text-on-surface">Todas</button>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-caps text-on-surface-variant px-2 bg-surface-container-low py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Modo Optimizado Activo</span>
+</div>
+</div>
+<!-- Real-time Live Financial KPIs Ribbon -->
+<div class="flex items-center flex-wrap gap-space-sm bg-surface-container-low p-1.5 rounded-xl">
+<!-- Efectivo -->
+<div class="flex items-center gap-space-xs px-space-md py-1 bg-surface-container-lowest rounded-lg shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Total Efectivo</span>
+<span class="font-mono-data-sm text-mono-data-sm font-semibold text-secondary" id="kpi-efectivo">3420,50 €</span>
+</div>
+</div>
+<!-- Tarjeta -->
+<div class="flex items-center gap-space-xs px-space-md py-1 bg-surface-container-lowest rounded-lg shadow-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Total Tarjeta</span>
+<span class="font-mono-data-sm text-mono-data-sm font-semibold text-primary" id="kpi-tarjeta">5840,25 €</span>
+</div>
+</div>
+<!-- Facturado / Total -->
+<div class="flex items-center gap-space-xs px-space-md py-1 bg-primary-container text-on-primary rounded-lg shadow-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] opacity-80 uppercase tracking-wider">Total Facturado</span>
+<span class="font-mono-data-sm text-mono-data-sm font-bold" id="kpi-total">9260,75 €</span>
+</div>
+</div>
+<!-- Activas Count -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-[15px]">reorder</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">Líneas Activas</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface font-semibold" id="kpi-count">3 / 25</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Spreadsheet Data Grid Container -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col mb-space-md">
+<!-- Quick helper top strip on grid hover -->
+<div class="bg-surface-container-low px-space-md py-1.5 flex items-center justify-between text-[11px] font-mono-data-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">touch_app</span> Clic para editar o pulsar celda
+        </span>
+<span class="hidden sm:inline-flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-secondary">content_copy</span> "Copiar fecha": propaga automáticamente a filas inferiores
+        </span>
+</div>
+<div class="flex items-center gap-space-sm font-label-caps uppercase">
+<span class="text-secondary font-semibold" id="grid-status-strip">● 3 Filas Bloqueadas Ocultas (Total Cuadrado Protegido)</span>
+</div>
+</div>
+<!-- Scrollable Table Grid -->
+<div class="overflow-x-auto w-full max-h-[620px] overflow-y-auto select-none relative" id="ledger-grid-container">
+<table class="w-full border-collapse text-left text-body-sm font-body-sm table-fixed min-w-[1080px]" id="caja-ledger-table">
+<!-- Table Column Width Allocations -->
+<colgroup>
+<col class="w-[90px]"> <!-- Estado & Acciones -->
+<col class="w-[125px]"> <!-- Fecha Caja + Copy Down -->
+<col class="w-[125px]"> <!-- Fecha Albarán -->
+<col class="w-[155px]"> <!-- Nº Albarán / Factura -->
+<col class="w-[130px]"> <!-- Nº Cliente -->
+<col class="w-[135px]"> <!-- Cobro Efectivo -->
+<col class="w-[135px]"> <!-- Cobro Tarjeta -->
+<col class="w-auto"> <!-- Observaciones -->
+</colgroup>
+<!-- Pinned Sticky Table Header -->
+<thead class="sticky top-0 z-20 bg-surface-container text-on-surface uppercase font-label-caps text-label-caps tracking-wider shadow-xs">
+<tr class="h-9">
+<th class="px-space-sm text-center">Estado</th>
+<th class="px-space-md group relative">
+<div class="flex items-center justify-between">
+<span class="">Fecha Caja</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" title="Herramienta copiar fecha activa">event</span>
+</div>
+</th>
+<th class="px-space-md">
+<div class="flex items-center justify-between">
+<span class="">F. Albarán</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">calendar_month</span>
+</div>
+</th>
+<th class="px-space-md">
+<div class="flex items-center justify-between">
+<span class="">Nº Albarán / Factura</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">tag</span>
+</div>
+</th>
+<th class="px-space-md">
+<div class="flex items-center justify-between">
+<span class="">Nº Cliente</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">badge</span>
+</div>
+</th>
+<th class="px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<span class="">Cobro Efectivo</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">payments</span>
+</div>
+</th>
+<th class="px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<span class="">Cobro Tarjeta</span>
+<span class="material-symbols-outlined text-[14px] text-primary">credit_card</span>
+</div>
+</th>
+<th class="px-space-md">
+<span class="">Observaciones / Tags</span>
+</th>
+</tr>
+</thead>
+<!-- Grid Body Rows -->
+<tbody class="bg-surface-container-lowest font-body-md text-body-md" id="ledger-table-body">
+<!-- ROW 1: Locked & Hidden by default -->
+<tr class="ledger-row row-locked h-[30px] bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group hidden" data-locked="true" data-row-id="1">
+<td class="px-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-0.5 rounded text-secondary hover:bg-surface-container" onclick="toggleRowLock(1)" title="Fila bloqueada (Clic para desbloquear)">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: &quot;FILL&quot; 1;">lock</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(1)" title="Eliminar movimiento">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate">
+<span class="cell-val">28/05/2025</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate">
+<span class="cell-val">28/05/2025</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface font-semibold truncate">
+<span class="cell-val text-primary">ALB-2025-0841</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface truncate">
+<span class="cell-val">CLI-84920</span>
+</td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary truncate">
+<span class="cell-val" data-field="efectivo">450,00 €</span>
+</td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-on-surface truncate">
+<span class="cell-val" data-field="tarjeta">0,00 €</span>
+</td>
+<td class="px-space-md truncate">
+<span class="cell-val text-body-sm text-on-surface-variant">Cobro mostrador / Entrega matinal</span>
+</td>
+</tr>
+<!-- ROW 2: Locked & Hidden by default -->
+<tr class="ledger-row row-locked h-[30px] bg-surface-container-lowest hover:bg-surface-container-low transition-colors group hidden" data-locked="true" data-row-id="2">
+<td class="px-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-0.5 rounded text-secondary hover:bg-surface-container" onclick="toggleRowLock(2)" title="Fila bloqueada">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: &quot;FILL&quot; 1;">lock</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(2)">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate">
+<span class="cell-val">28/05/2025</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate">
+<span class="cell-val">27/05/2025</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface font-semibold truncate">
+<span class="cell-val text-primary">ALB-2025-0842</span>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface truncate">
+<span class="cell-val">CLI-10294</span>
+</td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-on-surface truncate">
+<span class="cell-val" data-field="efectivo">0,00 €</span>
+</td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary truncate">
+<span class="cell-val" data-field="tarjeta">1.250,50 €</span>
+</td>
+<td class="px-space-md truncate">
+<span class="cell-val text-body-sm text-on-surface-variant">TPV BBVA POS-02 / Factura simplificada</span>
+</td>
+</tr>
+<!-- ROW 3: Locked & Hidden by default -->
+<tr class="ledger-row row-locked h-[30px] bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group hidden" data-locked="true" data-row-id="3">
+<td class="px-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-0.5 rounded text-secondary hover:bg-surface-container" onclick="toggleRowLock(3)">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: &quot;FILL&quot; 1;">lock</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(3)">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">28/05/2025</span></td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">28/05/2025</span></td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface font-semibold truncate"><span class="cell-val text-primary">FAC-1092</span></td>
+<td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface truncate"><span class="cell-val">CLI-99214</span></td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary truncate"><span class="cell-val" data-field="efectivo">820,00 €</span></td>
+<td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-on-surface truncate"><span class="cell-val" data-field="tarjeta">0,00 €</span></td>
+<td class="px-space-md truncate"><span class="cell-val text-body-sm text-on-surface-variant">Suministros hostelería / Pago parcial</span></td>
+</tr>
+<!-- ROW 4: Editable / Active Row -->
+<tr class="ledger-row row-active h-[38px] bg-surface-container-lowest hover:bg-surface-container-low transition-colors group" data-locked="false" data-row-id="4">
+<td class="px-space-sm text-center">
+<div class="row-status-cell flex items-center justify-center gap-1">
+<span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+<button class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container" onclick="toggleRowLock(4)" title="Bloquear y ocultar fila">
+<span class="material-symbols-outlined text-[15px]">lock_open</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(4)" title="Eliminar fila">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<!-- Col 2: Fecha de Caja with "Copiar hacia abajo" tool -->
+<td class="px-space-sm relative group/copy">
+<div class="flex items-center gap-1">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" value="28/05/2025" data-nav-bound="true">
+<button class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity" onclick="copyDateDown(4)" title="Copiar esta fecha hacia abajo a todas las filas vacías">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</button>
+</div>
+</td>
+<!-- Col 3: Fecha Albarán -->
+<td class="px-space-sm">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" value="28/05/2025" data-nav-bound="true">
+</td>
+<!-- Col 4: Nº Albarán -->
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="ALB-2025-0843" data-nav-bound="true">
+</td>
+<!-- Col 5: Nº Cliente -->
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="CLI-44012" data-nav-bound="true">
+</td>
+<!-- Col 6: Cobro Efectivo -->
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="efectivo" type="text" value="150,00" data-nav-bound="true">
+</td>
+<!-- Col 7: Cobro Tarjeta -->
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="tarjeta" type="text" value="680,25" data-nav-bound="true">
+</td>
+<!-- Col 8: Observaciones -->
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="Entrega urgente 14:00h - Cliente habitual" data-nav-bound="true">
+</td>
+</tr>
+<!-- ROW 5: Editable / Active Row -->
+<tr class="ledger-row row-active h-[38px] bg-surface-container-low/20 hover:bg-surface-container-low transition-colors group" data-locked="false" data-row-id="5">
+<td class="px-space-sm text-center">
+<div class="row-status-cell flex items-center justify-center gap-1">
+<span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+<button class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container" onclick="toggleRowLock(5)">
+<span class="material-symbols-outlined text-[15px]">lock_open</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(5)">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<td class="px-space-sm relative group/copy">
+<div class="flex items-center gap-1">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" value="28/05/2025" data-nav-bound="true">
+<button class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity" onclick="copyDateDown(5)">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</button>
+</div>
+</td>
+<td class="px-space-sm">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" value="28/05/2025" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="ALB-2025-0844" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="CLI-22819" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="efectivo" type="text" value="2.000,50" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="tarjeta" type="text" value="3.909,50" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" type="text" value="Venta mayorista liquidación" data-nav-bound="true">
+</td>
+</tr>
+<!-- ROW 6: New empty Draft Entry ready for fast key typing -->
+<tr class="ledger-row row-active h-[38px] bg-surface-container-lowest hover:bg-surface-container-low transition-colors group" data-locked="false" data-row-id="6">
+<td class="px-space-sm text-center">
+<div class="row-status-cell flex items-center justify-center gap-1">
+<span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+<button class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container" onclick="toggleRowLock(6)" title="Bloquear y ocultar fila">
+<span class="material-symbols-outlined text-[15px]">lock_open</span>
+</button>
+<button class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" onclick="deleteRow(6)" title="Eliminar fila">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</td>
+<td class="px-space-sm relative group/copy">
+<div class="flex items-center gap-1">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" value="28/05/2025" data-nav-bound="true">
+<button class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity" onclick="copyDateDown(6)">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</button>
+</div>
+</td>
+<td class="px-space-sm">
+<input class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" maxlength="10" placeholder="DD/MM/AAAA" type="text" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" placeholder="ALB-..." type="text" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" placeholder="CLI-..." type="text" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="efectivo" placeholder="0,00" type="text" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" data-field="tarjeta" placeholder="0,00" type="text" data-nav-bound="true">
+</td>
+<td class="px-space-sm">
+<input class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none" placeholder="Añadir observaciones..." type="text" data-nav-bound="true">
+</td>
+</tr>
+</tbody>
+<!-- Pinned Totals Row directly inside ledger table -->
+<tfoot class="sticky bottom-0 bg-surface-container-high font-mono-data-sm text-mono-data-sm text-on-surface z-20 shadow-md">
+<tr class="h-10">
+<td class="px-space-sm text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">functions</span>
+</td>
+<td class="px-space-md font-headline-sm text-headline-sm uppercase text-on-surface text-right pr-4" colspan="4">
+              Totales de Cuadrícula Activa:
+            </td>
+<td class="px-space-md text-right font-mono-data-md text-mono-data-md font-bold text-secondary">
+<span class="" id="foot-total-efectivo">3420,50 €</span>
+</td>
+<td class="px-space-md text-right font-mono-data-md text-mono-data-md font-bold text-primary">
+<span class="" id="foot-total-tarjeta">5840,25 €</span>
+</td>
+<td class="px-space-md text-on-surface-variant font-body-sm text-body-sm">
+              Balance Cuadrado: <strong class="text-on-surface font-mono-data-sm" id="foot-balance-cuadrado">9260,75 €</strong>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- Quick Append Row Interactive Prompt -->
+<div class="p-2 bg-surface-container-low flex items-center justify-between">
+<button class="w-full py-2 bg-surface-container hover:bg-surface-variant text-primary rounded-lg text-body-sm font-body-sm font-semibold flex items-center justify-center gap-2 transition-all" id="btn-quick-append" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="">Presione <kbd class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-mono-data-sm text-[11px] text-on-surface shadow-xs">Enter</kbd> o <kbd class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-mono-data-sm text-[11px] text-on-surface shadow-xs">↓</kbd> en la última fila para añadir automáticamente una nueva línea</span>
+</button>
+</div>
+<!-- Pagination & Record Status Footer -->
+<div class="px-space-md py-space-sm bg-surface-container flex flex-wrap items-center justify-between gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span class="">Mostrando <strong class="text-on-surface font-mono-data-sm" id="showing-range">1-3</strong> de <strong class="text-on-surface font-mono-data-sm" id="total-records-footer">142</strong> registros</span>
+<div class="hidden sm:flex items-center gap-1">
+<span class="">Filas por página:</span>
+<select class="bg-surface-container-lowest text-on-surface text-body-sm rounded px-1.5 py-0.5 focus:outline-none">
+<option>25</option>
+<option>50</option>
+<option>100</option>
+<option>Todas</option>
+</select>
+</div>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 bg-primary-container text-on-primary rounded font-mono-data-sm text-[12px] font-bold">1</span>
+<button class="px-2 py-0.5 hover:bg-surface-container-high text-on-surface rounded font-mono-data-sm text-[12px]">2</button>
+<button class="px-2 py-0.5 hover:bg-surface-container-high text-on-surface rounded font-mono-data-sm text-[12px]">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="px-2 py-0.5 hover:bg-surface-container-high text-on-surface rounded font-mono-data-sm text-[12px]">6</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Keyboard Ergonomics & Shortcuts Legend Bar -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-primary font-semibold text-body-sm">
+<span class="material-symbols-outlined text-[20px]">keyboard</span>
+<span class="">Ergonomía de Teclado Rápido:</span>
+</div>
+<!-- Keyboard Badges Grid -->
+<div class="flex flex-wrap items-center gap-space-sm text-mono-data-sm text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">Tab</kbd> / <kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">Shift+Tab</kbd>
+<span class="">Siguiente / Anterior celda</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">Enter</kbd> / <kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">↓</kbd>
+<span class="">Siguiente fila / Nueva línea</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">↑ ↓ ← →</kbd>
+<span class="">Navegación</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">F2</kbd> o <kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">Clic</kbd>
+<span class="">Sobrescribir inmediato</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+<kbd class="font-bold text-on-surface bg-surface-container-lowest px-1 rounded shadow-xs">Esc</kbd>
+<span class="">Cancelar edición</span>
+</div>
+</div>
+</div>
+<!-- Modal / Overlay for Import Preview (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-xs flex items-center justify-center p-4" id="import-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">upload_file</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" id="import-modal-title">Importar Extracto</h2>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="closeImportModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="text-body-sm text-on-surface-variant">
+        Seleccione el archivo contable con las columnas requeridas (Fecha, Nº Albarán, Cliente, Importe Efectivo, Importe Tarjeta). Se validarán duplicados de albarán automáticamente.
+      </p>
+<div class="p-6 bg-surface-container-low rounded-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[40px] text-primary mb-2">cloud_upload</span>
+<span class="font-body-md font-semibold text-on-surface">Arrastre aquí su archivo o pulse para examinar</span>
+<span class="text-[11px] font-mono-data-sm text-on-surface-variant mt-1">Formatos compatibles: .xlsx, .xls, .csv (UTF-8)</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-space-md py-1.5 rounded-lg text-body-sm text-on-surface-variant hover:bg-surface-container" onclick="closeImportModal()">Cancelar</button>
+<button class="px-space-md py-1.5 rounded-lg text-body-sm font-semibold bg-primary text-on-primary hover:bg-primary-container shadow-sm" onclick="confirmImport()">Cargar y Procesar</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Global State for Hide-Locked Mode
+  let hideLockedRows = true;
+  let nextRowId = 7;
+  const STORAGE_KEY = 'caja_diaria_records';
+
+  // Helper for notification toast
+  function showToast(text) {
+    const toast = document.getElementById('toast-notify');
+    const msg = document.getElementById('toast-message');
+    if (!toast || !msg) return;
+    msg.textContent = text;
+    toast.classList.remove('translate-y-16', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-16', 'opacity-0');
+    }, 2400);
+  }
+
+  // Visual Autosave Indicator Pulse
+  function triggerAutosaveIndicator() {
+    const icon = document.getElementById('autosave-icon');
+    const text = document.getElementById('autosave-text');
+    if (!icon || !text) return;
+    icon.textContent = 'sync';
+    icon.classList.add('animate-spin');
+    text.textContent = 'Guardando...';
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      icon.textContent = 'cloud_done';
+      text.textContent = 'Guardado en LocalStorage';
+    }, 350);
+  }
+
+  // 1. AUTO-GUARDADO / PERSISTENCIA (LocalStorage)
+  function saveToLocalStorage() {
+    const rows = document.querySelectorAll('#ledger-table-body tr');
+    const records = [];
+
+    rows.forEach(row => {
+      const id = row.getAttribute('data-row-id');
+      const isLocked = row.getAttribute('data-locked') === 'true';
+      let fCaja = '', fAlb = '', nAlb = '', nCli = '', efec = '', tarj = '', obs = '';
+
+      if (isLocked) {
+        const cells = row.querySelectorAll('.cell-val');
+        fCaja = cells[0] ? cells[0].textContent.trim() : '';
+        fAlb = cells[1] ? cells[1].textContent.trim() : '';
+        nAlb = cells[2] ? cells[2].textContent.trim() : '';
+        nCli = cells[3] ? cells[3].textContent.trim() : '';
+        efec = cells[4] ? cells[4].textContent.replace(' €', '').trim() : '0,00';
+        tarj = cells[5] ? cells[5].textContent.replace(' €', '').trim() : '0,00';
+        obs = cells[6] ? cells[6].textContent.trim() : '';
+      } else {
+        const inputs = row.querySelectorAll('.cell-input');
+        fCaja = inputs[0] ? inputs[0].value.trim() : '';
+        fAlb = inputs[1] ? inputs[1].value.trim() : '';
+        nAlb = inputs[2] ? inputs[2].value.trim() : '';
+        nCli = inputs[3] ? inputs[3].value.trim() : '';
+        efec = inputs[4] ? inputs[4].value.trim() : '0,00';
+        tarj = inputs[5] ? inputs[5].value.trim() : '0,00';
+        obs = inputs[6] ? inputs[6].value.trim() : '';
+      }
+
+      records.push({
+        id: Number(id),
+        locked: isLocked,
+        fCaja,
+        fAlb,
+        nAlb,
+        nCli,
+        efec,
+        tarj,
+        obs
+      });
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+    triggerAutosaveIndicator();
+  }
+
+  // Render a specific row HTML given data
+  function createRowElement(data) {
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-row-id', data.id);
+    tr.setAttribute('data-locked', data.locked ? 'true' : 'false');
+
+    if (data.locked) {
+      tr.className = 'ledger-row row-locked h-[30px] bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group';
+      if (hideLockedRows) tr.classList.add('hidden');
+      tr.innerHTML = `
+        <td class="px-space-sm text-center">
+          <div class="flex items-center justify-center gap-1">
+            <button onclick="toggleRowLock(${data.id})" title="Fila bloqueada (Clic para desbloquear)" class="p-0.5 rounded text-secondary hover:bg-surface-container">
+              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+            </button>
+            <button onclick="deleteRow(${data.id})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">${data.fCaja || '28/05/2025'}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">${data.fAlb || '28/05/2025'}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface font-semibold truncate"><span class="cell-val text-primary">${data.nAlb || '-'}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface truncate"><span class="cell-val">${data.nCli || '-'}</span></td>
+        <td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary truncate"><span class="cell-val" data-field="efectivo">${data.efec || '0,00'} €</span></td>
+        <td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary truncate"><span class="cell-val" data-field="tarjeta">${data.tarj || '0,00'} €</span></td>
+        <td class="px-space-md truncate"><span class="cell-val text-body-sm text-on-surface-variant">${data.obs || '-'}</span></td>
+      `;
+    } else {
+      tr.className = 'ledger-row row-active h-[38px] bg-surface-container-lowest hover:bg-surface-container-low transition-colors group';
+      tr.innerHTML = `
+        <td class="px-space-sm text-center">
+          <div class="row-status-cell flex items-center justify-center gap-1">
+            <span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+            <button onclick="toggleRowLock(${data.id})" title="Bloquear y ocultar fila" class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container">
+              <span class="material-symbols-outlined text-[15px]">lock_open</span>
+            </button>
+            <button onclick="deleteRow(${data.id})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-sm relative group/copy">
+          <div class="flex items-center gap-1">
+            <input type="text" value="${data.fCaja || '28/05/2025'}" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+            <button onclick="copyDateDown(${data.id})" title="Copiar hacia abajo" class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-[14px]">south</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.fAlb || ''}" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.nAlb || ''}" placeholder="ALB-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.nCli || ''}" placeholder="CLI-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.efec || ''}" placeholder="0,00" data-field="efectivo" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.tarj || ''}" placeholder="0,00" data-field="tarjeta" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${data.obs || ''}" placeholder="Añadir observaciones..." class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+      `;
+    }
+    return tr;
+  }
+
+  // Restore records from LocalStorage on load
+  function restoreFromLocalStorage() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const records = JSON.parse(stored);
+        if (Array.isArray(records) && records.length > 0) {
+          const tbody = document.getElementById('ledger-table-body');
+          tbody.innerHTML = '';
+          let maxId = 0;
+          records.forEach(rec => {
+            if (rec.id > maxId) maxId = rec.id;
+            const tr = createRowElement(rec);
+            tbody.appendChild(tr);
+          });
+          nextRowId = maxId + 1;
+          setupInputsForNav();
+          updateLockedVisibility();
+          recalculateTotals();
+          showToast('Datos restaurados automáticamente desde LocalStorage');
+          return true;
+        }
+      }
+    } catch(e) {
+      console.warn('Error reading from localStorage', e);
+    }
+    return false;
+  }
+
+  // 2. OCULTAR FILAS YA BLOQUEADAS Y ACTUALIZAR VISTAS
+  function updateLockedVisibility() {
+    const lockedRows = document.querySelectorAll('#ledger-table-body tr[data-locked="true"]');
+    const lockedCount = lockedRows.length;
+    const badge = document.getElementById('locked-hidden-count');
+    const icon = document.getElementById('toggle-hide-icon');
+    const label = document.getElementById('toggle-hide-label');
+    const stripStatus = document.getElementById('grid-status-strip');
+
+    if (badge) badge.textContent = `${lockedCount} ocultos`;
+
+    lockedRows.forEach(row => {
+      if (hideLockedRows) {
+        row.classList.add('hidden');
+      } else {
+        row.classList.remove('hidden');
+      }
+    });
+
+    if (hideLockedRows) {
+      if (icon) icon.textContent = 'visibility_off';
+      if (label) label.textContent = 'Ocultar bloqueados';
+      if (stripStatus) stripStatus.textContent = `● ${lockedCount} Filas Bloqueadas Ocultas (Total Cuadrado Protegido)`;
+    } else {
+      if (icon) icon.textContent = 'visibility';
+      if (label) label.textContent = 'Mostrando bloqueados';
+      if (stripStatus) stripStatus.textContent = `● Mostrando todas las filas (incluidas ${lockedCount} bloqueadas)`;
+    }
+
+    recalculateTotals();
+  }
+
+  // Row Lock/Unlock toggling with Auto-hide
+  window.toggleRowLock = function(rowId) {
+    const row = document.querySelector(`tr[data-row-id="${rowId}"]`);
+    if (!row) return;
+
+    const isCurrentlyLocked = row.getAttribute('data-locked') === 'true';
+
+    if (isCurrentlyLocked) {
+      // Transition from locked to editable
+      row.setAttribute('data-locked', 'false');
+      row.classList.remove('row-locked', 'h-[30px]', 'bg-surface-container-low/40', 'hidden');
+      row.classList.add('row-active', 'h-[38px]');
+
+      const cells = row.querySelectorAll('.cell-val');
+      const fCaja = cells[0] ? cells[0].textContent.trim() : '28/05/2025';
+      const fAlb = cells[1] ? cells[1].textContent.trim() : '28/05/2025';
+      const nAlb = cells[2] ? cells[2].textContent.trim() : '';
+      const nCli = cells[3] ? cells[3].textContent.trim() : '';
+      const efec = cells[4] ? cells[4].textContent.replace(' €', '').trim() : '0,00';
+      const tarj = cells[5] ? cells[5].textContent.replace(' €', '').trim() : '0,00';
+      const obs = cells[6] ? cells[6].textContent.trim() : '';
+
+      row.innerHTML = `
+        <td class="px-space-sm text-center">
+          <div class="row-status-cell flex items-center justify-center gap-1">
+            <span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+            <button onclick="toggleRowLock(${rowId})" title="Bloquear y ocultar fila" class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container">
+              <span class="material-symbols-outlined text-[15px]">lock_open</span>
+            </button>
+            <button onclick="deleteRow(${rowId})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-sm relative group/copy">
+          <div class="flex items-center gap-1">
+            <input type="text" value="${fCaja}" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+            <button onclick="copyDateDown(${rowId})" title="Copiar hacia abajo" class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-[14px]">south</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${fAlb}" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${nAlb}" placeholder="ALB-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${nCli}" placeholder="CLI-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${efec}" placeholder="0,00" data-field="efectivo" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${tarj}" placeholder="0,00" data-field="tarjeta" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+        <td class="px-space-sm">
+          <input type="text" value="${obs}" placeholder="Añadir observaciones..." class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+        </td>
+      `;
+      setupInputsForNav();
+      showToast(`Fila #${rowId} desbloqueada para edición`);
+    } else {
+      // Transition from inputs to locked & auto-hide
+      const inputs = row.querySelectorAll('.cell-input');
+      const fCaja = inputs[0] ? inputs[0].value.trim() : '28/05/2025';
+      const fAlb = inputs[1] ? inputs[1].value.trim() : '28/05/2025';
+      const nAlb = inputs[2] ? inputs[2].value.trim() : '-';
+      const nCli = inputs[3] ? inputs[3].value.trim() : '-';
+      const efec = inputs[4] ? inputs[4].value.trim() : '0,00';
+      const tarj = inputs[5] ? inputs[5].value.trim() : '0,00';
+      const obs = inputs[6] ? inputs[6].value.trim() : '-';
+
+      row.setAttribute('data-locked', 'true');
+      row.classList.remove('row-active', 'h-[38px]');
+      row.classList.add('row-locked', 'h-[30px]', 'bg-surface-container-low/40');
+
+      row.innerHTML = `
+        <td class="px-space-sm text-center">
+          <div class="flex items-center justify-center gap-1">
+            <button onclick="toggleRowLock(${rowId})" title="Fila bloqueada (Clic para desbloquear)" class="p-0.5 rounded text-secondary hover:bg-surface-container">
+              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+            </button>
+            <button onclick="deleteRow(${rowId})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+            </button>
+          </div>
+        </td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">${fCaja}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate"><span class="cell-val">${fAlb}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface font-semibold truncate"><span class="cell-val text-primary">${nAlb}</span></td>
+        <td class="px-space-md font-mono-data-sm text-mono-data-sm text-on-surface truncate"><span class="cell-val">${nCli}</span></td>
+        <td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary truncate"><span class="cell-val" data-field="efectivo">${efec} €</span></td>
+        <td class="px-space-md text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary truncate"><span class="cell-val" data-field="tarjeta">${tarj} €</span></td>
+        <td class="px-space-md truncate"><span class="cell-val text-body-sm text-on-surface-variant">${obs}</span></td>
+      `;
+
+      if (hideLockedRows) {
+        row.classList.add('hidden');
+        showToast(`Fila #${rowId} bloqueada y guardada (oculta de la vista)`);
+      } else {
+        showToast(`Fila #${rowId} bloqueada y guardada`);
+      }
+    }
+    updateLockedVisibility();
+    saveToLocalStorage();
+  };
+
+  // Toggle Hide Locked Rows
+  document.getElementById('toggle-hide-locked')?.addEventListener('click', () => {
+    hideLockedRows = !hideLockedRows;
+    updateLockedVisibility();
+    showToast(hideLockedRows ? 'Filas bloqueadas ocultadas' : 'Mostrando todas las filas bloqueadas');
+  });
+
+  // Delete Row Handler
+  window.deleteRow = function(rowId) {
+    const row = document.querySelector(`tr[data-row-id="${rowId}"]`);
+    if (!row) return;
+    row.remove();
+    updateLockedVisibility();
+    saveToLocalStorage();
+    showToast(`Fila #${rowId} eliminada`);
+  };
+
+  // Helper function to format date strings cleanly to DD/MM/AAAA
+  function formatDateString(str) {
+    if (!str) return '';
+    const digits = str.replace(/\D/g, '').slice(0, 8);
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 4) return digits.slice(0, 2) + '/' + digits.slice(2);
+    return digits.slice(0, 2) + '/' + digits.slice(2, 4) + '/' + digits.slice(4);
+  }
+
+  // Copy Date Down tool
+  window.copyDateDown = function(fromRowId) {
+    const currentRow = document.querySelector(`tr[data-row-id="${fromRowId}"]`);
+    if (!currentRow) return;
+
+    let sourceDate = '28/05/2025';
+    const input = currentRow.querySelector('td:nth-child(2) input');
+    const val = currentRow.querySelector('td:nth-child(2) .cell-val');
+    if (input) sourceDate = input.value;
+    else if (val) sourceDate = val.textContent;
+
+    sourceDate = formatDateString(sourceDate) || sourceDate;
+
+    const rows = Array.from(document.querySelectorAll('#ledger-table-body tr'));
+    const startIndex = rows.indexOf(currentRow);
+    let updatedCount = 0;
+
+    for (let i = startIndex + 1; i < rows.length; i++) {
+      const targetRow = rows[i];
+      const targetInput = targetRow.querySelector('td:nth-child(2) input');
+      if (targetInput) {
+        targetInput.value = sourceDate;
+        updatedCount++;
+      } else {
+        const targetVal = targetRow.querySelector('td:nth-child(2) .cell-val');
+        if (targetVal) {
+          targetVal.textContent = sourceDate;
+          updatedCount++;
+        }
+      }
+    }
+    saveToLocalStorage();
+    showToast(`Fecha "${sourceDate}" copiada a ${updatedCount} fila(s) inferior(es)`);
+  };
+
+  // Lock All Filled Rows button handler: marks locked and immediately hides
+  document.getElementById('btn-lock-all')?.addEventListener('click', () => {
+    const rows = document.querySelectorAll('#ledger-table-body tr[data-locked="false"]');
+    let lockedCount = 0;
+    rows.forEach(row => {
+      const rowId = row.getAttribute('data-row-id');
+      const albInput = row.querySelector('td:nth-child(4) input');
+      const efInput = row.querySelector('td:nth-child(6) input');
+      const tjInput = row.querySelector('td:nth-child(7) input');
+      const hasContent = (albInput && albInput.value.trim().length > 0) ||
+                         (efInput && efInput.value.trim().length > 0 && efInput.value.trim() !== '0,00') ||
+                         (tjInput && tjInput.value.trim().length > 0 && tjInput.value.trim() !== '0,00');
+
+      if (hasContent) {
+        window.toggleRowLock(rowId);
+        lockedCount++;
+      }
+    });
+    if (lockedCount > 0) {
+      showToast(`${lockedCount} filas bloqueadas y ocultadas para mayor comodidad`);
+    } else {
+      showToast('No se encontraron filas con datos para bloquear');
+    }
+  });
+
+  // Unlock All button handler
+  document.getElementById('btn-unlock-all')?.addEventListener('click', () => {
+    const lockedRows = document.querySelectorAll('#ledger-table-body tr[data-locked="true"]');
+    lockedRows.forEach(row => {
+      const rowId = row.getAttribute('data-row-id');
+      window.toggleRowLock(rowId);
+    });
+    showToast(`${lockedRows.length} filas desbloqueadas`);
+  });
+
+  // Add Line Handler
+  function addNewLine(focusInput = true) {
+    const tbody = document.getElementById('ledger-table-body');
+    const newRow = document.createElement('tr');
+    const newId = nextRowId;
+    newRow.setAttribute('data-row-id', newId);
+    newRow.setAttribute('data-locked', 'false');
+    newRow.className = 'ledger-row row-active h-[38px] bg-surface-container-lowest hover:bg-surface-container-low transition-colors group';
+
+    newRow.innerHTML = `
+      <td class="px-space-sm text-center">
+        <div class="row-status-cell flex items-center justify-center gap-1">
+          <span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>
+          <button onclick="toggleRowLock(${newId})" title="Bloquear y ocultar fila" class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container">
+            <span class="material-symbols-outlined text-[15px]">lock_open</span>
+          </button>
+          <button onclick="deleteRow(${newId})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila">
+            <span class="material-symbols-outlined text-[14px]">delete</span>
+          </button>
+        </div>
+      </td>
+      <td class="px-space-sm relative group/copy">
+        <div class="flex items-center gap-1">
+          <input type="text" value="28/05/2025" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+          <button onclick="copyDateDown(${newId})" title="Copiar hacia abajo" class="text-on-surface-variant hover:text-primary p-0.5 rounded hover:bg-surface-container opacity-40 group-hover/copy:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-[14px]">south</span>
+          </button>
+        </div>
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="DD/MM/AAAA" maxlength="10" class="cell-input date-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="ALB-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="CLI-..." class="cell-input w-full bg-transparent px-1.5 py-1 font-mono-data-sm text-mono-data-sm text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="0,00" data-field="efectivo" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-secondary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="0,00" data-field="tarjeta" class="cell-input money-input w-full bg-transparent px-1.5 py-1 text-right font-mono-data-sm text-mono-data-sm font-semibold text-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+      <td class="px-space-sm">
+        <input type="text" placeholder="Añadir observaciones..." class="cell-input w-full bg-transparent px-1.5 py-1 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#4338ca] focus:rounded focus:outline-none">
+      </td>
+    `;
+    tbody.appendChild(newRow);
+    setupInputsForNav();
+
+    if (focusInput) {
+      const albInput = newRow.querySelector('td:nth-child(4) input');
+      if (albInput) albInput.focus();
+    }
+    nextRowId++;
+    updateLockedVisibility();
+    saveToLocalStorage();
+    showToast('Nueva línea creada (Enter / ↓)');
+  }
+
+  document.getElementById('btn-add-line')?.addEventListener('click', () => addNewLine(true));
+  document.getElementById('btn-quick-append')?.addEventListener('click', () => addNewLine(true));
+
+  // Dynamic Navigation, Row Editing Status & Ergonomics Setup
+  function setupInputsForNav() {
+    const inputs = document.querySelectorAll('.cell-input');
+    inputs.forEach((input) => {
+      if (input.dataset.navBound === 'true') return;
+      input.dataset.navBound = 'true';
+
+      const row = input.closest('tr');
+      const rowId = row ? row.getAttribute('data-row-id') : null;
+
+      // Status indicator update helper
+      const updateRowStatus = (isEditing) => {
+        if (!row || row.getAttribute('data-locked') === 'true') return;
+        const statusCell = row.querySelector('.row-status-cell');
+        if (!statusCell) return;
+        const currentLockBtn = `<button onclick="toggleRowLock(${rowId})" title="Bloquear y ocultar fila" class="p-0.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container"><span class="material-symbols-outlined text-[15px]">lock_open</span></button><button onclick="deleteRow(${rowId})" class="opacity-0 group-hover:opacity-100 p-0.5 rounded text-error hover:bg-error-container/40 transition-opacity" title="Eliminar fila"><span class="material-symbols-outlined text-[14px]">delete</span></button>`;
+
+        if (isEditing) {
+          statusCell.innerHTML = `<span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-primary font-medium animate-pulse"><span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span><span class="hidden xl:inline">Editando</span></span>${currentLockBtn}`;
+        } else {
+          statusCell.innerHTML = `<span class="inline-flex items-center gap-0.5 text-[11px] font-mono-data-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px] text-secondary">check</span><span class="hidden xl:inline">Guardado</span></span>${currentLockBtn}`;
+        }
+      };
+
+      // Auto-select text on focus and show 'Editando' status
+      input.addEventListener('focus', function() {
+        this.select();
+        updateRowStatus(true);
+      });
+
+      // When leaving field, mark as saved immediately, persist and refresh totals
+      input.addEventListener('blur', function() {
+        // Delay slightly in case moving to another input in the same row
+        setTimeout(() => {
+          if (!row.contains(document.activeElement)) {
+            updateRowStatus(false);
+          }
+        }, 80);
+        saveToLocalStorage();
+        recalculateTotals();
+      });
+
+      // Save to localStorage whenever user modifies content
+      input.addEventListener('change', () => {
+        saveToLocalStorage();
+        recalculateTotals();
+      });
+
+      // Automatic Date Masking on Keydown / Input
+      if (input.classList.contains('date-input')) {
+        let isDeleting = false;
+        input.addEventListener('keydown', function(e) {
+          isDeleting = (e.key === 'Backspace' || e.key === 'Delete');
+        });
+
+        input.addEventListener('input', function() {
+          if (isDeleting) return;
+          const cursorPos = this.selectionStart;
+          let val = this.value.replace(/\D/g, ''); // get digits only
+          if (val.length > 8) val = val.slice(0, 8);
+
+          let formatted = '';
+          if (val.length > 4) {
+            formatted = val.slice(0, 2) + '/' + val.slice(2, 4) + '/' + val.slice(4);
+          } else if (val.length > 2) {
+            formatted = val.slice(0, 2) + '/' + val.slice(2);
+          } else {
+            formatted = val;
+          }
+
+          this.value = formatted;
+        });
+      }
+
+      input.addEventListener('keydown', function(e) {
+        const currentRow = this.closest('tr');
+        const currentRowInputs = Array.from(currentRow.querySelectorAll('.cell-input'));
+        const inputIndexInRow = currentRowInputs.indexOf(this);
+
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          updateRowStatus(false);
+          saveToLocalStorage();
+          recalculateTotals();
+
+          // Find next visible active row
+          let nextRow = currentRow.nextElementSibling;
+          while (nextRow && nextRow.classList.contains('hidden')) {
+            nextRow = nextRow.nextElementSibling;
+          }
+
+          if (nextRow) {
+            const nextRowInputs = nextRow.querySelectorAll('.cell-input');
+            if (nextRowInputs.length > inputIndexInRow) {
+              nextRowInputs[inputIndexInRow].focus();
+            } else if (nextRowInputs[0]) {
+              nextRowInputs[0].focus();
+            }
+          } else {
+            // Last row reached -> Create new line automatically
+            addNewLine(true);
+          }
+        } else if (e.key === 'ArrowDown') {
+          let nextRow = currentRow.nextElementSibling;
+          while (nextRow && nextRow.classList.contains('hidden')) {
+            nextRow = nextRow.nextElementSibling;
+          }
+
+          if (nextRow) {
+            const nextInputs = nextRow.querySelectorAll('.cell-input');
+            if (nextInputs.length > inputIndexInRow) {
+              e.preventDefault();
+              nextInputs[inputIndexInRow].focus();
+            }
+          } else if (inputIndexInRow >= 0) {
+            e.preventDefault();
+            addNewLine(true);
+          }
+        } else if (e.key === 'ArrowUp') {
+          let prevRow = currentRow.previousElementSibling;
+          while (prevRow && prevRow.classList.contains('hidden')) {
+            prevRow = prevRow.previousElementSibling;
+          }
+
+          if (prevRow) {
+            const prevInputs = prevRow.querySelectorAll('.cell-input');
+            if (prevInputs.length > inputIndexInRow) {
+              e.preventDefault();
+              prevInputs[inputIndexInRow].focus();
+            }
+          }
+        }
+      });
+
+      // Recalculate on input
+      if (input.classList.contains('money-input')) {
+        input.addEventListener('input', () => {
+          recalculateTotals();
+        });
+      }
+    });
+  }
+
+  // Live Totals and KPI recalculation (Includes both locked/hidden + active rows)
+  function recalculateTotals() {
+    let sumEfectivo = 0;
+    let sumTarjeta = 0;
+    let countTotal = 0;
+    let countActiveVisible = 0;
+
+    // Aggregate all rows (including locked/hidden records for true daily total)
+    document.querySelectorAll('[data-field="efectivo"]').forEach(el => {
+      let valStr = el.value !== undefined ? el.value : el.textContent;
+      valStr = valStr.replace('€', '').replace(/\./g, '').replace(',', '.').trim();
+      const num = parseFloat(valStr) || 0;
+      sumEfectivo += num;
+    });
+
+    document.querySelectorAll('[data-field="tarjeta"]').forEach(el => {
+      let valStr = el.value !== undefined ? el.value : el.textContent;
+      valStr = valStr.replace('€', '').replace(/\./g, '').replace(',', '.').trim();
+      const num = parseFloat(valStr) || 0;
+      sumTarjeta += num;
+    });
+
+    const totalFacturado = sumEfectivo + sumTarjeta;
+    const allRows = document.querySelectorAll('#ledger-table-body tr');
+    countTotal = allRows.length;
+
+    allRows.forEach(r => {
+      if (!r.classList.contains('hidden') && r.style.display !== 'none') {
+        countActiveVisible++;
+      }
+    });
+
+    // Formatting currency to Spanish format: 1.234,56 €
+    const fmt = num => num.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+
+    const kpiEf = document.getElementById('kpi-efectivo');
+    const kpiTj = document.getElementById('kpi-tarjeta');
+    const kpiTt = document.getElementById('kpi-total');
+    const footEf = document.getElementById('foot-total-efectivo');
+    const footTj = document.getElementById('foot-total-tarjeta');
+    const kpiCount = document.getElementById('kpi-count');
+    const balanceCuadrado = document.getElementById('foot-balance-cuadrado');
+    const showingRange = document.getElementById('showing-range');
+
+    if (kpiEf) kpiEf.textContent = fmt(sumEfectivo);
+    if (kpiTj) kpiTj.textContent = fmt(sumTarjeta);
+    if (kpiTt) kpiTt.textContent = fmt(totalFacturado);
+    if (footEf) footEf.textContent = fmt(sumEfectivo);
+    if (footTj) footTj.textContent = fmt(sumTarjeta);
+    if (balanceCuadrado) balanceCuadrado.textContent = fmt(totalFacturado);
+    if (kpiCount) kpiCount.textContent = `${countActiveVisible} / 25`;
+    if (showingRange) showingRange.textContent = `1-${countActiveVisible}`;
+  }
+
+  // Real-time Search Filter across all columns
+  const searchInput = document.getElementById('table-search-input');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const q = this.value.toLowerCase().trim();
+      if (searchClearBtn) {
+        searchClearBtn.classList.toggle('hidden', q === '');
+      }
+
+      const rows = document.querySelectorAll('#ledger-table-body tr');
+      rows.forEach(row => {
+        const isLocked = row.getAttribute('data-locked') === 'true';
+
+        let textContent = '';
+        row.querySelectorAll('input').forEach(i => textContent += ' ' + i.value);
+        row.querySelectorAll('.cell-val').forEach(c => textContent += ' ' + c.textContent);
+
+        const matches = textContent.toLowerCase().includes(q);
+
+        if (q === '') {
+          // Restore normal visibility rules
+          if (isLocked && hideLockedRows) {
+            row.classList.add('hidden');
+          } else {
+            row.classList.remove('hidden');
+          }
+          row.style.display = '';
+        } else {
+          // In active search, allow seeing matches even if locked
+          if (matches) {
+            row.classList.remove('hidden');
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        }
+      });
+      recalculateTotals();
+    });
+
+    searchClearBtn?.addEventListener('click', () => {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.focus();
+    });
+  }
+
+  // Dropdown Toggles for Import / Export
+  const btnImport = document.getElementById('btn-import-menu');
+  const dropImport = document.getElementById('import-dropdown');
+  const btnExport = document.getElementById('btn-export-menu');
+  const dropExport = document.getElementById('export-dropdown');
+
+  btnImport?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropImport?.classList.toggle('hidden');
+    dropExport?.classList.add('hidden');
+  });
+
+  btnExport?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropExport?.classList.toggle('hidden');
+    dropImport?.classList.add('hidden');
+  });
+
+  window.addEventListener('click', () => {
+    dropImport?.classList.add('hidden');
+    dropExport?.classList.add('hidden');
+  });
+
+  // Modal triggers
+  window.triggerImport = function(type) {
+    dropImport?.classList.add('hidden');
+    const modal = document.getElementById('import-modal');
+    const title = document.getElementById('import-modal-title');
+    if (title) title.textContent = `Importar archivo ${type.toUpperCase()}`;
+    modal?.classList.remove('hidden');
+  };
+
+  window.closeImportModal = function() {
+    document.getElementById('import-modal')?.classList.add('hidden');
+  };
+
+  window.confirmImport = function() {
+    closeImportModal();
+    saveToLocalStorage();
+    showToast('Archivo importado con éxito: 12 líneas añadidas');
+  };
+
+  window.exportData = function(format) {
+    dropExport?.classList.add('hidden');
+    showToast(`Generando y descargando exportación ${format.toUpperCase()}...`);
+  };
+
+  // Keyboard shortcut listener for F2, F3
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'F3') {
+      e.preventDefault();
+      searchInput?.focus();
+    }
+  });
+
+  // INITIALIZATION ON LOAD
+  window.addEventListener('DOMContentLoaded', () => {
+    const restored = restoreFromLocalStorage();
+    if (!restored) {
+      setupInputsForNav();
+      updateLockedVisibility();
+      recalculateTotals();
+      // Store initial state into localStorage
+      saveToLocalStorage();
+    }
+  });
+</script></main></div>
+
+
+</body></html>
